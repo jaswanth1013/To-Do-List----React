@@ -1,0 +1,129 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: hsla(300, 76%, 72%, 0.612); */
+   background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+
+
+}
+
+.to-do-list{
+    text-align: center;
+    padding: 100px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 3rem;
+    color: hsla(240, 100%, 50%, 0.87);
+}
+
+button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    
+}
+
+button:hover {
+  animation: bounce 0.3s ease-in-out;
+}
+
+.add-button{
+    background-color: hsla(120, 100%, 25%, 0.738);
+}
+
+.add-button:hover{
+    background-color: hsla(120, 100%, 25%, 3.837);
+}
+
+.delete-button{
+    background-color: hsla(0, 100%, 50%, 0.674);
+}
+
+.delete-button:hover{
+    background-color: hsla(0, 100%, 50%, 3.771);
+}
+
+.move-button{
+    background-color: hsla(240, 100%, 50%, 0.581);
+}
+
+.move-button:hover{
+    background-color: hsla(240, 100%, 50%, 2.849);
+}
+
+input[type="text"]{
+    color: black;
+    font-size: 1.6rem;
+    padding: 10px;
+    border: 3px solid hsla(0, 0%, 50%, 0.666);
+    border-radius: 5px;
+    color: hsla(0, 0%, 0%, 0.5);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px hsla(201, 96%, 42%, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+ol{
+    padding: 0;
+}
+
+li{
+    display: flex;
+    align-items: flex-start;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: hsla(0, 0%, 100%, 0.427); 
+    margin-bottom: 10px;
+    border: 3px solid hsla(0, 0%, 0%, 0.474);
+    border-radius: 5px;
+    animation: fadeIn 0.4s ease-in;
+}
+
+.text {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+
+  /* 💥 THE FIX 💥 */
+  min-width: 0; 
+}
+
+.delete-button , .move-button{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+    
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
